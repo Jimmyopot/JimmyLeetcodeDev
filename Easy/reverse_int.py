@@ -37,7 +37,7 @@ class Solution(object):
         
         
         
-# soln2 (STRING REVERSE METHOD)
+# soln2 (STRING REVERSE METHOD)****************BEST SOLN********************
 
 def reverse_integer(x):
     y = str(abs(x))  # converts int x to a string

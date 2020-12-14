@@ -83,7 +83,7 @@ class Solution3(object):
         
         while x > 0:
             reverse = (reverse * 10) + (x % 10)
-            x = x // 10
+            x = x // 10  # floor returns whole number
         return reverse 
     
 l = Solution3()

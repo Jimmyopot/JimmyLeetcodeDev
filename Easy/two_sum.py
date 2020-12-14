@@ -45,13 +45,13 @@ print(l, two_sum([2, 7, 11, 15], 26))  # [2, 3]
 # soln 3 *************************USED THIS****************************
 class Solution:
     def two_sum(self, nums, target):
-        seen = {}
+        hash_map = {}  # this is a hash map
         
         for index, num in enumerate(nums):
             n = target - num
-            if n in seen:
-                return([seen[n], index])
-            elif n not in seen:
+            if n in hash_map:
+                return([hash_map[n], index])
+            elif n not in hash_map:
                 seen[num] = index
                 
 l = Solution()
@@ -65,8 +65,8 @@ nums = [-2, 1, 2, 4, 7, 11]
 target = 6
 
 def two_sum(nums, target):
-    i = 0
-    j = len(nums) - 1
+    i = 0  # 1st index
+    j = len(nums) - 1  # last index
     
     while i <= j:
         if nums[i] + nums[j] == target:
