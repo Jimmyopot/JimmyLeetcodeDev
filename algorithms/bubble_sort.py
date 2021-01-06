@@ -1,5 +1,7 @@
 # soln 1
-
+'''
+- Compare side-by-side until array is in ascending order.
+'''
 def bubble_sort(num_list):
     n = len(num_list)
     
