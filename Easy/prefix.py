@@ -1,3 +1,16 @@
+'''
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+Example 1:
+
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+'''
+
+
+
 #  soln 1
 
 class Solution(object):
@@ -8,12 +21,12 @@ class Solution(object):
         if len(strs) == 1:
             return (strs[0])
         
-        prefix = strs[0]
+        prefix = strs[0]  # first string/word in the list
         prefixlen = len(prefix)  # minimum length is 1st string in array
         
         for i in strs[1:]:  # starting from the 2nd prefix to the end...  
             while prefix != i[0:prefixlen]:
-                prefix = prefix[0:(prefixlen-1)]
+                prefix = prefix[0:(prefixlen-1)]  # shorten the prefix by 1
                 prefixlen -= 1
                 
                 if prefixlen == 0:
@@ -58,7 +71,7 @@ print(l.longestCommonPrefix1(["common","compare","commit"]))
 
 
 
-# soln 3
+# soln 3 **************************Best Soln*************************
 
 class Solution2(object):
     def longestCommonPrefix2(self, strs):
@@ -83,4 +96,24 @@ class Solution2(object):
         return lcp
     
 l = Solution2()
-print(l.longestCommonPrefix2(["common","compare","commit"]))
+print(l.longestCommonPrefix2(["advice","advocate","advantage"]))
+
+
+
+# solution 4 ****************************Quickest Best Soln*******************
+class Solution4(object):
+    def longestCommonPrefix(self, strs):
+        if not strs:
+            return ""
+        elif len(strs) == 1:
+            return strs[0]
+        
+        for i in range(len(strs[0])):
+            char = strs[0][i]
+            for j in range(1, len(strs)):
+                if i == len(strs[j]) or strs[j][i] != char:
+                    return strs[0][:i]
+        return strs[0]
+    
+l = Solution4()
+print(l.longestCommonPrefix(["proud", "promote", "promise"]))

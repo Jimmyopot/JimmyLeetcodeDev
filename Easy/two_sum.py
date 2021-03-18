@@ -66,7 +66,7 @@ class Solution:
             if n in hash_map:
                 return([hash_map[n], index])
             elif n not in hash_map:
-                seen[num] = index
+                hash_map[num] = index
                 
 l = Solution()
 print(l, two_sum([], 27))              # []

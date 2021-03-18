@@ -1,3 +1,10 @@
+'''
+- Given an integer x, return true if x is palindrome integer.
+- An integer is a palindrome when it reads the same backward as forward. 
+  For example, 121 is palindrome while 123 is not.
+'''
+
+
 # soln 1 (string convertion)
 
 class Solution(object):
@@ -72,7 +79,7 @@ print(b.isPalindrome2(121))
 
 
 
-# soln 4
+# soln 4 *******************************BEST SOLN **********************************    
 
 class Solution3(object):
     def isPalindrome3(self, x):
@@ -87,4 +94,4 @@ class Solution3(object):
         return reverse 
     
 l = Solution3()
-print(l.isPalindrome3(121))
+print(l.isPalindrome3(120))
