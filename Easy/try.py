@@ -110,6 +110,7 @@ class Soln:
     
 l = Soln()
 print(l.two_sum([3,6,7], 10))
+<<<<<<< HEAD
 
 
 
@@ -138,3 +139,5 @@ def binary_search(list, target):
     return None
 
 print(binary_search([1,2,3,5,7,8], 6))
+=======
+>>>>>>> 586cb7c28738ccaef79f70aa4c7ea7b3192beeb0

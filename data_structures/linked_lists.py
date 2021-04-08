@@ -196,6 +196,7 @@ llist5.Atbeginning("Tue")
 llist5.Atbeginning("Wed")
 llist5.Atbeginning("Thu")
 llist5.RemoveNode("Tue")
+<<<<<<< HEAD
 llist5.listprint5()
 print("*****************")
 
@@ -325,3 +326,6 @@ class LinkedList:
                 
             current = current.next_node
         return '-> '.join(nodes)
+=======
+llist5.listprint5()
+>>>>>>> 586cb7c28738ccaef79f70aa4c7ea7b3192beeb0
