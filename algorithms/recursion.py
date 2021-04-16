@@ -34,8 +34,8 @@ print(l)
 # soln 3
 
 def sum_n(n):
-    if n== 0:
-        return 0
+    if n== 0:  # this is the base case
+        return 0  # otherwise, RecursionError: maximum recursion depth exceeded
     else:
         return n + sum_n(n-1)
     
@@ -72,3 +72,29 @@ def fibonacci(k):
 
 print("\n\nRecursion Example Results")
 fibonacci(6)
+
+
+
+# soln 6
+
+# add numbers in a list
+def sum(numbers):
+    total = 0
+    
+    for i in numbers:
+        total += i
+    return total
+
+print(sum([1,2,3,4]))
+
+
+# add numbers in a list recursively
+def sum_recursion(numbers):
+    if not numbers:  # this is the base case
+        return 0  # otherwise, RecursionError: maximum recursion depth exceeded
+    else:
+        remaining_sum = sum_recursion(numbers[1:])
+        return numbers[0] + remaining_sum
+
+print(sum_recursion([1,2,3,4,7,9]))
+            

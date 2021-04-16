@@ -196,7 +196,6 @@ llist5.Atbeginning("Tue")
 llist5.Atbeginning("Wed")
 llist5.Atbeginning("Thu")
 llist5.RemoveNode("Tue")
-<<<<<<< HEAD
 llist5.listprint5()
 print("*****************")
 
@@ -219,7 +218,7 @@ class Node6:
         return "<Node data: %s>" % self.data
     
     
-class LinkedList:
+class LinkedList6:
     """
     Singly linked list
     """
@@ -292,6 +291,11 @@ class LinkedList:
         new.next_node = next_node
         
     def remove(self, key):
+        """
+        Removes node containing data that matches the key
+        Returns the node or none if key doesn't exist
+        Takes O(n) time
+        """
         current = self.head
         previous = None
         found = False
@@ -306,6 +310,8 @@ class LinkedList:
             else:
                 previous = current
                 current = current.next_node
+                
+        return current
         
     def __repr__(self):
         """
@@ -326,6 +332,4 @@ class LinkedList:
                 
             current = current.next_node
         return '-> '.join(nodes)
-=======
 llist5.listprint5()
->>>>>>> 586cb7c28738ccaef79f70aa4c7ea7b3192beeb0
