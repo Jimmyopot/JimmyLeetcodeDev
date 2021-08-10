@@ -6,6 +6,7 @@
 - Sort the 2 lists by RECURSION!
 """
 
+# TREEHOUSE SOLN
 def quicksort(values):
     if len(values) <= 1:
         return values
@@ -25,4 +26,7 @@ def quicksort(values):
 sorted_numbers = quicksort([56,12,76,34,8,16,109,49])
 print(sorted_numbers)
     
+# Time complexity: O(n^2) worst case
+# Time complexity: O(n log n) best case
+# Space complexity: O(1)
     

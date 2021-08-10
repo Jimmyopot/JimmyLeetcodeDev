@@ -15,6 +15,7 @@ def binary_search(list, target):
             
     return None
 
+
 def verify(index):
     if index is not None:
         print("Target found at index: ", index)
@@ -25,3 +26,5 @@ numbers = [1,2,3,4,5,6]
 
 result = binary_search(numbers, 6)
 verify(result)
+
+# Runs in linear time, O(log n)

@@ -20,3 +20,28 @@ print(linear_search([2,4,6,7], 4))
 print(linear_search([2,4,6,7], 10))
 
 # Runs in linear time, O(n)
+
+
+
+# example 2
+
+def searchBinary(myList, item):
+    first = 0
+    last = len(myList) - 1
+    foundFlag = False 
+    
+    while (first <= last and not foundFlag):
+        mid = (first + last) // 2
+        if myList[mid] == item:
+            foundFlag = True
+        else:
+            if item < myList[mid]:
+                last = mid - 1
+            else:
+                first = mid + 1
+                
+    return foundFlag
+
+
+l = searchBinary([1,2,3,4,5], 4)
+print(l)

@@ -126,10 +126,23 @@ l = Solution6()
 print(l.roman_to_int("LVIII"))
         
         
-# longest common prefix
-
-class Solution7():
-    def longest_common_prefix(self, s):
+def binary_search(list, target):
+    first = 0
+    last = len(list) -1
+    
+    while first <= last:
+        midpoint = (first + last) // 2 # floor rounds off to nearest whole no.
+        
+        if list[midpoint] == target:
+            return midpoint
+        elif list[midpoint] < target:
+            first = midpoint + 1
+        else:
+            last = midpoint - 1
+            
+    return None
+        
+print(binary_search([1,2,3,4,5], 5))
         
                 
             
